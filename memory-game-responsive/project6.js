@@ -216,9 +216,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const startButton = document.getElementById("start-button");
 
   startButton.addEventListener("click", () => {
-      gameContainer.style.width = "min(80vw, 600px)"; /* Expand Game */
-      gameContainer.style.top = "calc(50% + 20px)"; /* Move Down */
-      gameGrid.style.display = "grid"; /* Show Grid */
-      generateFruitBorder(); /* Adjust Border */
+    gameContainer.style.width = "min(80vw, 700px)";
+    gameContainer.style.height = "min(80vh, 90%)";
+    gameContainer.style.top = "50%";
+    gameContainer.style.left = "50%";
+    gameContainer.style.transform = "translate(-50%, -50%)";
+    gameGrid.style.display = "grid"; 
+    generateFruitBorder(); // Adjust fruit border to surround new size
   });
 });

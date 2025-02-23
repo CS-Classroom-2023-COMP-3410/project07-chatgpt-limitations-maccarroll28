@@ -1,4 +1,4 @@
-/* 🎭 Unique Dance Animations 🎭 */
+/* ðŸŽ­ Unique Dance Animations ðŸŽ­ */
 @keyframes pivotDance {
   0%, 100% { transform: rotate(0deg); }
   25% { transform: rotate(-10deg); transform-origin: bottom center; }
@@ -49,7 +49,7 @@
   50% { transform: translateY(-5px); }
 }
 
-/* 🎭 Unique Fruit Animations (Dancing & Rotating) */
+/* ðŸŽ­ Unique Fruit Animations (Dancing & Rotating) */
 @keyframes rotateDance {
   0%, 100% { transform: rotate(0deg); }
   50% { transform: rotate(360deg); }
@@ -67,7 +67,7 @@
   75% { transform: rotate(-15deg); }
 }
 
-/* 🍉 Fruit Border Container */
+/* ðŸ‰ Fruit Border Container */
 .fruit-border {
     position: fixed;
     top: 0;
@@ -78,7 +78,7 @@
     z-index: 999;
 }
 
-/* 🍎 Individual Fruit Border Items */
+/* ðŸŽ Individual Fruit Border Items */
 .fruit-item {
     font-size: 24px;
     display: flex;
@@ -86,22 +86,27 @@
     align-items: center;
 }
 
-/* 🎮 Centered Game Container */
 .game-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: min(90vw, 600px); /* Responsive width */
-    background: #fff;
-    border: 5px solid #333;
-    border-radius: 10px;
-    padding: 20px;
-    z-index: 1000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90vw, 600px);
+  height: min(90vh, 80%);
+  background: #fff;
+  border: 5px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: width 0.3s ease, height 0.3s ease;
 }
 
-/* 🃏 Game Grid */
+
+/* ðŸƒ Game Grid */
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -109,7 +114,7 @@
     margin-bottom: 20px;
 }
 
-/* 🔘 Buttons */
+/* ðŸ”˜ Buttons */
 button {
     padding: 10px 15px;
     border: none;
@@ -122,7 +127,7 @@ button {
 button:hover {
     background: #5c8fd6;
 }
-/* 🎭 Assign Animations */
+/* ðŸŽ­ Assign Animations */
 .pivot-dance { animation: pivotDance 0.6s infinite; }
 .bounce-dance { animation: bounceDance 0.6s infinite; }
 .top-pivot-dance { animation: topPivotDance 0.6s infinite; }
@@ -132,13 +137,13 @@ button:hover {
 .spin-dance { animation: spinDance 1.5s linear infinite; }
 .float-dance { animation: floatDance 1.2s infinite ease-in-out; }
 
-/* ✅ Matched cards stay green & fruit keeps dancing */
+/* âœ… Matched cards stay green & fruit keeps dancing */
 .card.match .card-front, 
 .card.match .card-back {
   background: green !important;
 }
 
-/* 🎊 Confetti Animation 🎊 */
+/* ðŸŽŠ Confetti Animation ðŸŽŠ */
 @keyframes confetti-fall {
   0% { transform: translateY(0) rotate(0deg); opacity: 1; }
   100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
@@ -166,7 +171,7 @@ button:hover {
   animation: confetti-fall 3s linear infinite;
 }
 
-/* 🎨 Different colors for confetti */
+/* ðŸŽ¨ Different colors for confetti */
 .confetti:nth-child(odd) { background: blue; }
 .confetti:nth-child(even) { background: yellow; }
 .confetti:nth-child(3n) { background: green; }
@@ -204,9 +209,12 @@ h1 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
   gap: 10px;
-  margin-bottom: 20px;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: auto;
 }
 
 .card {
